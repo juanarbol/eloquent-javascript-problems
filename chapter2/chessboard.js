@@ -1,8 +1,11 @@
-let str = '';
-let line = 1;
-const switcher = -1;
+let str = ''
+let line = 1
+const switcher = -1
 
-for (let i = 1; i <= 64; i++) {
+const binding = 8
+const squareArea = Math.pow(binding, 2)
+
+for (let i = 1; i <= squareArea; i++) {
   const isHash = Math.pow(switcher, i) < 0 
   if (line % 2 === 0) {
     if (isHash) {
@@ -18,7 +21,7 @@ for (let i = 1; i <= 64; i++) {
     }
   }
 
-  if (i % 8 === 0) {
+  if (i % binding === 0) {
     console.log(str)
     str = ''
     line ++
